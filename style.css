@@ -1,0 +1,137 @@
+:root {
+  --dark-color: #212121;
+}
+
+body {
+  font-family: system-ui;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 1.5em;
+  background-image: url("LearnFusionPage.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment:fixed;
+  
+}
+
+h1 {
+  margin-top: 10rem;
+  margin-bottom: 2rem;
+  margin-left: 40%;
+  font-size: 2em;
+  font-weight:bolder;
+}
+
+main {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main * {
+  margin-bottom: 2rem;
+  margin-left: 40%;
+  
+}
+
+input {
+  text-align: center;
+  font-size: large;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid black;
+  text-transform: capitalize;
+}
+
+/* for styling the autocomplete style */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: var(--dark-color) !important;
+}
+
+button {
+  background: black;
+  color: #fff;
+  border: none;
+  font-size: 0.8em;
+  padding: 5px 15px;
+  margin: 20px;
+  margin-left: 40%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover{
+  background:rgba(255, 255, 0, 0.581);
+  color: black;
+}
+
+/* dark mode css */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: var(--dark-color);
+    color: #fff;
+  }
+  input,
+  input:active {
+    background: var(--dark-color);
+    border-color: #fff;
+    color: #fff;
+  }
+
+  /* for styling the autocomplete style */
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: #fff !important;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    font-size: 1.2em;
+  }
+
+  h1 {
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    font-size: 1.5em;
+  }
+
+  main * {
+    margin-bottom: 1rem;
+  }
+
+  button {
+    font-size: 0.7em;
+    padding: 5px 10px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  body {
+    font-size: 1em;
+  }
+
+  h1 {
+    margin-top: 3rem;
+    font-size: 1.2em;
+  }
+
+  main {
+    padding: 0 1rem;
+  }
+
+  button {
+    font-size: 0.6em;
+    padding: 5px 8px;
+  }
+}
